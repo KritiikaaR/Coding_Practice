@@ -51,11 +51,16 @@ public class Main{
             System.out.println("First Name: ");
             String firstName=sc.nextLine();
 
-            System.out.println("Score(0-100): ");
-            int score=sc.nextInt();
-            sc.nextLine();
-            if(score>=0 && score<=100) break;
-            System.out.println("Invalid score, try againn. ");
+            int score;
+            while(true){
+                System.out.println("Score(0-100): ");
+                score=sc.nextInt();
+                sc.nextLine();
+                if(score>=0 && score<=100){
+                    break;
+                }
+                System.out.println("Invalid score, try againn. ");
+            }
 
             students[i]=new Student(lastName,firstName,score);
         }  
